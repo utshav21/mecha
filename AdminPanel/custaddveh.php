@@ -10,7 +10,8 @@ if(isset($_POST["submit"]))
     
     if(mysqli_query($conn,$query1))
 	{
-	   echo "<script>window.open('index.php?updated=Record Has Been Updated','_self')</script>";
+	//    echo "<script>window.open('index.php?updated=Record Has Been Updated','_self')</script>";
+    echo $query1;
 	}
 	else{
 		echo "<div class='alert alert-danger' role='alert'> <b> Error!!! </b> <br>This Number is already in use. Please check the number you are trying to update</div>";
