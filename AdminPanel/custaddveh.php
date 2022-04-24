@@ -1,11 +1,12 @@
 <?php
+
 if(isset($_POST["submit"]))
    {
     $v_brand = $_post['v_brand1'];
     $v_model = $_post['v_model1'];
     $v_reg_num = $_post['v_reg_num1'];
     $v_year = $_post['v_year1'];
-
+    include 'conn.php';
     $query1="INSERT INTO `user_vehicle_details` (`veh_brand`, `veh_model`, `veh_y_o_m`, `veh_reg_num`,`u_ids`) VALUES ('$v_brand', '$v_model', '$v_year','$v_reg_num','6')";
     
     if(mysqli_query($conn,$query1))
