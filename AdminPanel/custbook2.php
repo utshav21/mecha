@@ -31,7 +31,7 @@ include 'conn.php';
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
 <title>Website Design </title>
-<link rel="stylesheet" href="custbook.css">
+<link rel="stylesheet" href="custbook2.css">
 <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@1,100;1,300;1,600;1,900&display=swap" rel="stylesheet"> 
@@ -53,8 +53,13 @@ include 'conn.php';
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Scooter" value="option2"/>
                     <label class="form-check-label" for="scooter">Scooter</label>
                   </div>
-
+            </div>
                 <div class="user-details">
+                <div class="input-box">
+                <span class="details">Date</span>
+                <input class="text" type="date" name="u_date1">
+            </div>
+                    
                 <div class="input-box">
                 <span class="details">Vechile Registration Number</span>
 <!--                <input class="text" placeholder="Enter your Vechile Registration Number" name="u_registration1">-->
@@ -70,10 +75,7 @@ include 'conn.php';
                     </select>
             </div>
 
-            <div class="input-box">
-                <span class="details">Date</span>
-                <input class="text" type="date" name="u_date1">
-            </div>
+            
             
             <div class="input-box">
                 <span class="details">Hour</span>

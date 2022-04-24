@@ -89,7 +89,7 @@ if(isset($_POST["submit"]))
                     <input class="text" placeholder="Confirm your password"  name="u_cpasswd1">
                 </div>
         
-            <button type="doNotSubmit" onClick="parent.location='index.php'" class="btnn btn-primary btn-user btn-block"> Get Back </button>
+            <button type="doNotSubmit" name="doNotSubmit" class="btnn btn-primary btn-user btn-block"> Get Back </button>
               
               
             <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">Register Account</button>
