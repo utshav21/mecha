@@ -17,28 +17,28 @@
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Full Name</span>
-                    <input class="text" placeholder="Enter your name"  name="u_name1">
+                    <input class="text" placeholder="Enter your name"  name="t_name1">
                 </div>
                 <div class="input-box">
                     <span class="details">Phone Number</span>
-                    <input class="text" placeholder="Enter your number"  name="u_contact1"> 
+                    <input class="text" placeholder="Enter your number"  name="t_contact1"> 
                 </div>
                 <div class="input-box">
                     <span class="details">Address</span>
-                    <input class="text" placeholder="Enter your address"  name="u_address1">
+                    <input class="text" placeholder="Enter your address"  name="t_address1">
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input class="text" placeholder="Enter your email"  name="u_email1">
+                    <input class="text" placeholder="Enter your email"  name="t_email1">
                 </div>
                 <div class="input-box">
                     <span class="details">Department</span>
-                    <input class="text" placeholder="Enter your password"  name="u_passwd1">
+                    <input class="text" placeholder="Enter your department"  name="t_depart1">
                 </div>
                 <div class="input-box">
-                    <span class="details">Joined Date</span>
-                    <input class="text" placeholder="Enter your password"  name="u_passwd1">
-                </div>
+                <span class="details">Joined Date</span>
+                <input class="text" type="date" name="u_date1">
+            </div>
             <div class="button">
             <input type="submit" name="submit" value="Add">
             </div>
