@@ -56,7 +56,8 @@ if(isset($_POST["submit"]))
             
             <div class="input-box">
                 <span class="details">Year of Manufacture</span>
-                <input class="text" type="date" name="v_year1" required>
+                <input type="number" min="1900" max="2099" step="1" value="2022" name="v_year1" required />
+                <!-- <input class="text" type="year" name="v_year1" required> -->
             </div>
                     
             <div class="button">
