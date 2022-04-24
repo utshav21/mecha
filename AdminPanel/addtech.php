@@ -23,7 +23,7 @@ if(isset($_POST["submit"]))
 	echo $query1;
 	}
 }
-
+ 
 ?>
 
 <html>
