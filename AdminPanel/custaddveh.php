@@ -20,7 +20,7 @@ if(isset($_POST["update"]))
 	echo $query1;
 	}
 }
-
+ 
 ?>
 <html>
 <html>
