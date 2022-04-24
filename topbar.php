@@ -7,7 +7,7 @@
                 <li><a href="index.php">HOME</a></li>
                 <li><a href="About.php">ABOUT US</a></li>
                 <li><a href="Services.php">SERVICES</a></li>
-                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="#locate">CONTACT</a></li>
                 <li><a href="login.php">LOG IN</a></li>
                 <li><a href="registration.php">SIGN UP</a></li>
             </ul>

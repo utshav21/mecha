@@ -1,3 +1,31 @@
+<?php
+include 'conn.php';
+//$register = false;
+//$showError = false;
+//if(isset($_POST["submit"]))
+//   {
+//    $veh_num=$_POST['u_registration1'];
+//    
+//
+//    if($user_password == $user_cpassword){
+//        include 'conn.php';
+//        
+//        $query1 = "INSERT INTO `user_profile` (`u_name`, `u_email`, `u_password`, `u_contact`, `u_acc_created`) VALUES ('$user_username', '$user_email', '$user_password', '$user_contact',current_timestamp())";
+//        if(mysqli_query($conn,$query1)){
+//            $register = true;
+//            echo "<script>window.open('login.php','_self')</script>";
+//        }
+//        else{
+//            $showError = "UserName or Contact already in use";
+//        }
+//    }
+//    else{
+//        $showError = "Password Doesnot match";
+//
+//    }
+//}
+
+?>
 <html>
 <html>
 <head>
@@ -13,7 +41,7 @@
  
     <div class="container">
         <div class="title">Book Your Service Now</div>
-        <form action="#">
+        <form action="#" method="post">
 
             <div class="user-details">Type
                 <div class="form-check">
@@ -28,51 +56,23 @@
 
                 <div class="user-details">
                 <div class="input-box">
-                    <span class="details">Full Name</span>
-                    <input class="text" placeholder="Enter your name" required>
-                </div>
-            
-            <div class="input-box">
-                <span class="details">Email</span>
-                <input class="text" placeholder="Enter your email" required>
-            </div>
-           
-            <div class="input-box">
-                    <span class="details">Phone Number</span>
-                    <input class="text" placeholder="Enter your number" required>
-            </div>
-            
-                <div class="input-box">
-                        <span class="details">State</span>
-                        <input class="text" placeholder="Enter your state" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Addres</span>
-                    <input class="text" placeholder="Enter your address" required>
-                </div>
-                <div class="input-box">
-                    <span class="details">Brand</span>
-                    <input class="text" placeholder="Enter your two wheeler brand" required>
-                </div>
-           
-                <div class="input-box">
-                    <span class="details">Model</span>
-                    <input class="text" placeholder="Enter your two wheeler model" required>
-                </div>
-            
-            <div class="input-box">
                 <span class="details">Vechile Registration Number</span>
-                <input class="text" placeholder="Enter your Vechile Registration Number" required>
-            </div>
-
-            <div class="input-box">
-                    <span class="details">Odometer(kms)</span>
-                    <input class="text" placeholder="Odometer(kms)" required>
+<!--                <input class="text" placeholder="Enter your Vechile Registration Number" name="u_registration1">-->
+                    <select name="u_registration1">
+                    <option disable selected>Select: </option>
+                    <?php
+                        $query2="Select veh_reg_num From user_vehicle_details";
+                        $records=mysqli_query($conn,$query2);
+                        while ($data = mysqli_fetch_array($records)){
+                            echo "<option name='".$data['u_registration1']."'>".$data['veh_reg_num']."</option>";
+                        }
+                    ?>
+                    </select>
             </div>
 
             <div class="input-box">
                 <span class="details">Date</span>
-                <input class="text" type="date" required>
+                <input class="text" type="date" name="u_date1">
             </div>
             
             <div class="input-box">
@@ -100,7 +100,7 @@
             </div>
 
         <div class="button">
-            <input type="submit" value="Book Now">
+            <input type="submit" name="submit" value="Book Now">
         </div>
         </div>
         </div>

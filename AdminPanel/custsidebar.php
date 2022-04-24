@@ -20,7 +20,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="custbook.php">
+                    <a href="custbook2.php">
                         <i class="fas fa-book"></i>
                         <div class="title">New appointment</div>
                     </a>
