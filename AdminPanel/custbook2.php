@@ -43,17 +43,6 @@ include 'conn.php';
         <div class="title">Book Your Service Now</div>
         <form action="#" method="post">
 
-            <div class="user-details">Type
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="bike" value="option1"/>
-                    <label class="form-check-label" for="bike">Bike</label>
-                  </div>
-          
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Scooter" value="option2"/>
-                    <label class="form-check-label" for="scooter">Scooter</label>
-                  </div>
-            </div>
                 <div class="user-details">
                 <div class="input-box">
                 <span class="details">Date</span>
@@ -74,8 +63,6 @@ include 'conn.php';
                     ?>
                     </select>
             </div>
-
-            
             
             <div class="input-box">
                 <span class="details">Hour</span>
@@ -104,9 +91,7 @@ include 'conn.php';
         <div class="button">
             <input type="submit" name="submit" value="Book Now">
         </div>
-        </div>
-        </div>
-        
+        </div> 
     </form>
 </div>
 

@@ -202,7 +202,10 @@ label {
         padding: 30px;
     }
 }
-
+select {
+    width: 250px !important;
+    height: 45px !important;
+}
 *{
     margin: 0;
     padding: 0;

@@ -38,7 +38,6 @@ if(isset($_POST["submit"]))
         <div class="title">Add Your New Two-Wheeler</div>
         <form action="#" method="POST">
 
-            <div class="user-details">Type
                 <div class="user-details">
                 <div class="input-box">
                     <span class="details">Brand</span>
@@ -65,7 +64,6 @@ if(isset($_POST["submit"]))
             <input type="submit" name="submit" value="Add Now">
             </div>
         </div>
-            </div>
     </form>
  </div>
 </body>
