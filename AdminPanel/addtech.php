@@ -1,4 +1,31 @@
 
+<?php
+
+if(isset($_POST["submit"]))
+   {
+    $tech_name = $_POST['tech_name1'];
+    $tech_contact = $_POST['tech_contact1'];
+    $tech_address = $_POST['tech_address1'];
+    $tech_email = $_POST['tech_email1'];
+    $tech_speciality = $_POST['tech_speciality1'];
+
+
+    include 'conn.php';
+    $query1="INSERT INTO `technicians_profile` (`t_name`, `t_contact`, `t_address`, `t_speciality`,`t_email`) VALUES ('$tech_name', '$tech_contact', '$tech_address','$tech_speciality','$tech_email')";
+    
+    if(mysqli_query($conn,$query1))
+	{
+	//    echo "<script>window.open('index.php?updated=Record Has Been Updated','_self')</script>";
+    echo $query1;
+	}
+	else{
+		// echo "<div class='alert alert-danger' role='alert'> <b> Error!!! </b> <br>This Number is already in use. Please check the number you are trying to update</div>";
+	echo $query1;
+	}
+}
+
+?>
+
 <html>
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
@@ -17,28 +44,28 @@
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Full Name</span>
-                    <input class="text" placeholder="Enter your name"  name="t_name1">
+                    <input class="text" placeholder="Enter your name"  name="tech_name1">
                 </div>
                 <div class="input-box">
                     <span class="details">Phone Number</span>
-                    <input class="text" placeholder="Enter your number"  name="t_contact1"> 
+                    <input class="text" placeholder="Enter your number"  name="tech_contact1"> 
                 </div>
                 <div class="input-box">
                     <span class="details">Address</span>
-                    <input class="text" placeholder="Enter your address"  name="t_address1">
+                    <input class="text" placeholder="Enter your address"  name="tech_address1">
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input class="text" placeholder="Enter your email"  name="t_email1">
+                    <input class="text" placeholder="Enter your email"  name="tech_email1">
                 </div>
                 <div class="input-box">
-                    <span class="details">Department</span>
-                    <input class="text" placeholder="Enter your department"  name="t_depart1">
+                    <span class="details">speciality</span>
+                    <input class="text" placeholder="Enter your department"  name="tech_speciality1">
                 </div>
-                <div class="input-box">
+                <!-- <div class="input-box">
                 <span class="details">Joined Date</span>
-                <input class="text" type="date" name="u_date1">
-            </div>
+                <input class="text" type="date" name="uech_date1">
+            </div> -->
             <div class="button">
             <input type="submit" name="submit" value="Add">
             </div>
