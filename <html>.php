@@ -1,36 +1,3 @@
-
-<?php
-if(isset($_POST["gInsert"])){
-    
-    include 'conn.php';
-
-    //if (!$con){
-        //die("connection to this database failed due to". 
-        //mysqli_connect_error());
-    //}
-    // echo "Success connecting to the db";
-
-    $firstname = $_Post['firstname1'];
-    $lastname= $_Post['lastname1'];
-    $email= $_Post['email1'];
-    $contact= $_Post['contact1'];
-    $messages= $_Post['messages1'];
-    $sql = "INSERT INTO `guest_profile` (`g_first_name`, `g_last_name`, `g_email`, `g_contact`, `g_messages`) VALUES ('$firstname', '$lastname', '$email', '$contact', '$messages')";
-        echo "hello";
-    echo $firstname; 
-
-    // if($conn->query($sql) == true){
-    //     echo "Successfully inserted";
-    //     echo $sql;
-    // }
-    // else{
-    //     echo "ERROR: $sql <br> $conn->error";
-    //     echo $sql;
-    // }
-    //$conn->close();
-}
-?>
-
 <html>
     <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
@@ -48,40 +15,39 @@ if(isset($_POST["gInsert"])){
         </div>
         <div class="box">
             <!--Form box-->
-
             <div class="contact form">
             <h3> Send a Message</h3>
-            <form method="post" action="">
+            <form>
                 <div class="formBox"> 
                     <div class="row50">
                         <div class="inputBox">
                             <span>First Name</span>  
-                            <input type="text" placeholder="Enter Your First Name" name="firstname1">
+                            <input type="type" placeholder="Enter Your First Name">
                         </div>
                         <div class="inputBox">
                             <span>Last Name</span>  
-                            <input type="type" placeholder="Enter Your Last Name" name="lastname1">
+                            <input type="type" placeholder="Enter Your Last Name">
                         </div>
                     </div>
                     <div class="row50">
                         <div class="inputBox">
                             <span>Email</span>  
-                            <input type="type" placeholder="Enter Your Email" name="email1">
+                            <input type="type" placeholder="Enter Your Email">
                         </div>
                         <div class="inputBox">
                             <span>Mobile Number</span>  
-                            <input type="type" placeholder="Enter Your Number" name="contact1">
+                            <input type="type" placeholder="Enter Your Number">
                         </div>
                     </div>
                     <div class="row100">
                         <div class="inputBox">
                             <span>Message</span>  
-                            <textarea placeholder="Enter Your Messages here." name="messages1"></textarea>
+                            <textarea placeholder="Enter Your Messages here."></textarea>
                         </div>
                     </div>
                     <div class="row100">
                         <div class="inputBox">
-                           <input  class="hero-btn red-btn" type="submit" name="gInsert" value="Send">
+                           <a href="submit" class="hero-btn red-btn"> Send</a>
                         </div>
                     </div>
                     <div class="row100">

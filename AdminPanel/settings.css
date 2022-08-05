@@ -2,14 +2,157 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 body{
-    overflow-x: hidden;
+    display:block;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+   
+textarea {
+    margin: 0px;
+    width: 535px;
+    height: 100px;
 }
 .container{
-    position:relative ;
+    max-width: 700px;
     width: 100%;
+    margin: 10 220;
+    background: aliceblue;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #71b7e6, #15004a);
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.input-box textarea {
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+    resize: none;
+    min-height: 110px;
+    width: 620px;
+    margin-bottom: 10px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #190f44;
+}
+form .button{
+    height: 45px;
+    width: 150px;
+    margin-top: 145px;
+    margin-bottom: 0px;
+    
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+}
+form .button input:hover{
+    background: linear-gradient(rgba(63, 64, 67, 0.7),rgba(4,9,30,0.7));
+}
+
+nav{
+    position: relative;
+    margin: 70px auto 0;
+    width: 590px;
+    height: 50px;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+nav a:nth-child(1){
+    width: 100px;
+}
+nav .start-home, a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0;
+}
+nav a:nth-child(2){
+    width: 250px;
+}
+nav a:nth-child(2):hover~.animation{
+    width: 220px;
+    left: 110px;
+}
+nav a:nth-child(3){
+    width: 240px;
+}
+nav a:nth-child(3):hover~.animation{
+    width: 240px;
+    left: 350px;
 }
 .sidebar{
     position: fixed;
@@ -54,7 +197,8 @@ body{
     font-size: 20px;
 }
 .main{
-    position: absolute;
+    position:relative;
+    padding-top: 1px;
     width: calc(100% - 300px);
     min-height: 100vh;
     left: 300px;
@@ -127,7 +271,6 @@ img{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.7);
 }
 .number{
-    text-align: center;
     font-size: 35px;
     font-weight: 500;
     color: #fff;
@@ -235,50 +378,11 @@ td i{
     background: #ed5564;
 }
 
-@media(max-width:1090px){
-    .sidebar{
-        width: 60px;
-    }
-    .main{
-        width: calc(100% - 60px);
-        left: 60px;
-    }
-    .top-bar{
-        width: calc(100% - 60px);
-    }
-}
-@media(max-width:860px){
-    .cards{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .tables{
-        grid-template-columns: 1fr;
-    }
-}
-@media(max-width:530px){
-    .cards{
-        grid-template-columns: 1fr;
-    }
-    .last-appointments td:nth-child(3){
-        display: none;
-    }
-}
-@media(max-width:420px){
-    .last-appointments,
-    .technician-specialities{
-        font-size: 70%;
-        padding: 10px;
-        min-height: 200px;
-    }
-    .cards,
-    .tables{
-        padding: 10px;
-    }
-    .search input{
-        padding: 0 10px;
-    }
-    .user{
-        width: 40px;
-        height: 40px;
-    }
-}
+
+
+
+
+
+
+
+

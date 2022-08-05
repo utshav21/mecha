@@ -1,4 +1,4 @@
-<div class="main">
+div class="main">
             <div class="top-bar">
                 <div class="search">
                     <input type="text" name="search" placeholder="search here">

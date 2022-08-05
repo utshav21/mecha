@@ -1,6 +1,7 @@
 <html>
 <?php include "header.php"?>
 <body>
+    
 <section class="sub-header">
 <?php include "topbar.php"?>
 <h1>About US</h1>
