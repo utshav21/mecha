@@ -1,3 +1,31 @@
+<?php
+
+if(isset($_POST["update"]))
+    {
+        include 'conn.php';
+        
+    $v_brand = $_POST['v_brand1'];
+    $v_model = $_POST['v_model1'];
+    $v_reg_num = $_POST['v_reg_num1'];
+    $v_year = $_POST['v_year1'];
+    $sql = "INSERT INTO `user_vehicle_details` (`veh_brand`, `veh_model`, `veh_y_o_m`, `veh_reg_num`,`u_ids`) VALUES ('$v_brand', '$v_model', '$v_year','$v_reg_num','6')";
+    include 'conn.php';
+
+    if($conn->query($sql) == true){
+        echo "Successfully inserted";
+    
+    }
+    else{
+        echo "ERROR: $sql <br> $conn->error";
+      
+    }
+    $conn->close();
+}
+
+?>
+
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,32 +112,33 @@
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Scooter" value="option2"/>
                     <label class="form-check-label" for="scooter">Scooter</label>
                   </div>
-
+                
                 <div class="user-details">
                 <div class="input-box">
                     <span class="details">Brand</span>
-                    <input class="text" placeholder="Enter your two wheeler brand" required>
+                    <input class="text" placeholder="Enter your two wheeler brand" name="v_brand1">
                 </div>
            
                 <div class="input-box">
                     <span class="details">Model</span>
-                    <input class="text" placeholder="Enter your two wheeler model" required>
+                    <input class="text" placeholder="Enter your two wheeler model" name="v_model1">
                 </div>
-
-                <div class="input-box">
-                    <span class="details">Vechile Registration Number</span>
-                    <input class="text" placeholder="Enter your Vechile Registration Number" required>
-                </div>
-
-                <div class="input-box">
+            
+            <div class="input-box">
+                <span class="details">Vechile Registration Number</span>
+                <input class="text" placeholder="Enter your Vechile Registration Number" name="v_reg_num1">
+            </div>
+            
+            <div class="input-box">
                 <span class="details">Year of Manufacture</span>
-                <input class="text" placeholder="Enter year of manufacture" required>
-                </div>
-
-                <div class="button">
-                    <input type="submit" value="Add Vehicle">
-                </div>
-                </div>
+                <input type="number" min="1900" max="2099" step="1" value="2022" name="v_year1" />
+                <!-- <input class="text" type="year" name="v_year1" required> -->
+            </div>
+                    
+            <div class="button">
+            <input class="btn btn-success" type="submit" name="update" value="Add New">
+            </div>
+        </div>
         </form>
     </div>
 </div>

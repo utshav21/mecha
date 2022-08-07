@@ -1,3 +1,30 @@
+<?php
+if(isset($_POST["update"])){
+    
+    include 'conn.php';
+
+    $firstname = $_POST['firstname1'];
+    $lastname= $_POST['lastname1'];
+    $contact= $_POST['contact1'];
+    $email= $_POST['email1'];
+    $password= $_POST['password1'];
+    $sql = "INSERT INTO `user_profile`(`u_name`, `u_lname`, `u_contact`, `u_email`, `u_password`, `u_acc_created`) VALUES (('$firstname', '$lastname', '$contact', '$email', '$password')";
+    if($conn->query($sql) == true){
+        echo "Successfully inserted";
+    
+    }
+    else{
+        echo "ERROR: $sql <br> $conn->error";
+      
+    }
+    $conn->close();
+}
+?>
+
+
+
+"INSERT INTO `user_profile`(`u_id`, `u_name`, `u_contact`, `u_email`, `u_password`, `u_acc_created`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')";
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,42 +104,43 @@
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">First Name</span>
-                    <input class="text" type="text" required>
+                    <input class="text" type="text" name="firstname1">
                 </div>
             
                 <div class="input-box">
                     <span class="details">Last Name</span>
-                    <input class="text" type="text" required>
+                    <input class="text" type="text" name="lastname1">
                 </div>
 
                 <div class="input-box">
                     <span class="details">Phone Number</span>
-                    <input class="text" type="text"  required>
+                    <input class="text" type="text"  name="contact1">
                 </div>
                 
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input class="text" type="text" required>
+                    <input class="text" type="text" name="email1">
                 </div>
             
                 <div class="input-box">
                     <span class="details">Addres</span>
-                    <input class="text" type="text" required>
+                    <input class="text" type="text" name="address1">
                 </div>
 
                 <div class="input-box">
                     <span class="details">New Password</span>
-                    <input class="text" type="password" required>
+                    <input class="text" type="password" name="password1">
                 </div>
            
                 <div class="input-box">
                     <span class="details">Confirm Password</span>
-                    <input class="text" type="password"  required>
+                    <input class="text" type="password"   name="confirm1">
                 </div>
             
                 <div class="button">
-                    <input type="submit" value="Update Profile">
+                    <input class="hero-btn red-btn" type="submit" name="update" value="Update Profile">
                 </div>
+
         </form>
 </div>
 

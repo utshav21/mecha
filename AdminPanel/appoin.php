@@ -1,3 +1,27 @@
+<?php
+if(isset($_POST["gInsert"])){
+    
+    include 'conn.php';
+    $applicationdate = $_POST['date1'];
+    $applicationtime= $_POST['time1'];
+    $recordedproblem= $_POST['problem1'];
+    $status= $_POST['status1'];
+    $remarks= $_POST['remarks1'];
+    $sql = "INSERT INTO `record`(`app_date`, `app_time`, `rec_prob`, `rec_time`, `status`, `rermarks`) VALUES ('[applicationdate]','[applicationtime]','[recordedproblem]','[remarks]')";
+
+    if($conn->query($sql) == true){
+        echo "Successfully inserted";
+    
+    }
+    else{
+        echo "ERROR: $sql <br> $conn->error";
+      
+    }
+    $conn->close();
+}
+?>
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,60 +101,61 @@
                 <div class="user-details">
                 <div class="input-box">
                     <span class="details">Customer Name</span>
-                    <input class="text" placeholder="Enter customer's name" required>
+                    <input class="text" placeholder="Enter customer's name" name="name1">
                 </div>
             
             <div class="input-box">
                 <span class="details">Email</span>
-                <input class="text" placeholder="Enter customer's email" required>
+                <input class="text" placeholder="Enter customer's email" name="email1">
             </div>
            
             <div class="input-box">
                     <span class="details">Phone Number</span>
-                    <input class="text" placeholder="Enter customer's contact number" required>
+                    <input class="text" placeholder="Enter customer's contact number" name="contact1">
             </div>
             
                 <div class="input-box">
                         <span class="details">State</span>
-                        <input class="text" placeholder="Enter customer's state" required>
+                        <input class="text" placeholder="Enter customer's state" name="state1">
                 </div>
                 <div class="input-box">
                     <span class="details">Addres</span>
-                    <input class="text" placeholder="Enter customer's address" required>
+                    <input class="text" placeholder="Enter customer's address" name="address1">
                 </div>
                 <div class="input-box">
                     <span class="details">Brand</span>
-                    <input class="text" placeholder="Enter two wheeler brand" required>
+                    <input class="text" placeholder="Enter two wheeler brand" name="brand1">
                 </div>
            
                 <div class="input-box">
                     <span class="details">Model</span>
-                    <input class="text" placeholder="Enter two wheeler model" required>
+                    <input class="text" placeholder="Enter two wheeler model" name="model1">
                 </div>
             
             <div class="input-box">
                 <span class="details">Vechile Registration Number</span>
-                <input class="text" placeholder="Enter Vechile Registration Number" required>
+                <input class="text" placeholder="Enter Vechile Registration Number" name="regno1">
             </div>
 
             <div class="input-box">
                     <span class="details">Odometer(kms)</span>
-                    <input class="text" placeholder="Odometer(kms)" required>
+                    <input class="text" placeholder="Odometer(kms)" name="odo1">
             </div>
 
             <div class="input-box">
                 <span class="details">Date</span>
-                <input class="text" type="date" required>
+                <input class="text" type="date" name="date1">
             </div>
             
             <div class="input-box">
                     <span class="details">Description</span>
-                    <textarea placeholder="Enter your problem description here"></textarea>
+                    <textarea placeholder="Enter your problem description here" name="problem1"></textarea>
             </div>
 
-        <div class="button">
-            <input type="submit" value="Book Now">
-        </div>
+            <div class="button">
+                <input class="hero-btn red-btn" type="submit" name="gInsert" value="Book Now">
+            </div>
+
         </div>
         </div>
         

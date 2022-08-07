@@ -1,3 +1,31 @@
+<?php
+
+if(isset($_POST["submit"]))
+   {
+    $tech_name = $_POST['tech_name1'];
+    $tech_contact = $_POST['tech_contact1'];
+    $tech_address = $_POST['tech_address1'];
+    $tech_email = $_POST['tech_email1'];
+    $tech_speciality = $_POST['tech_speciality1'];
+
+
+    include 'conn.php';
+    $query1="INSERT INTO `technicians_profile` (`t_name`, `t_contact`, `t_address`, `t_speciality`,`t_email`) VALUES ('$tech_name', '$tech_contact', '$tech_address','$tech_speciality','$tech_email')";
+    
+    if(mysqli_query($conn,$query1))
+	{
+	//    echo "<script>window.open('index.php?updated=Record Has Been Updated','_self')</script>";
+    echo $query1;
+	}
+	else{
+		// echo "<div class='alert alert-danger' role='alert'> <b> Error!!! </b> <br>This Number is already in use. Please check the number you are trying to update</div>";
+	echo $query1;
+	}
+}
+ 
+?>
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -75,10 +103,6 @@
           <form action="#" method="post">  
             <div class="user-details">
                 <div class="input-box">
-                    <span class="details">Technician ID</span>
-                    <input class="text" placeholder="Enter the id"  required>
-                </div>
-                <div class="input-box">
                     <span class="details">Full Name</span>
                     <input class="text" placeholder="Enter the name" required> 
                 </div>
@@ -101,7 +125,7 @@
 
                 <div class="input-box">
                 <span class="details">Joined Date</span>
-                <input class="text" type="date" name="uech_date1">
+                <input class="text" type="date" name="tech_date1">
                 </div> 
             <div class="button">
             <input type="submit" name="submit" value="Add">

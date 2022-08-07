@@ -1,3 +1,28 @@
+<?php
+if(isset($_POST["gInsert"])){
+    
+    include 'conn.php';
+
+    $firstname = $_POST['firstname1'];
+    $lastname= $_POST['lastname1'];
+    $contact= $_POST['contact1'];
+    $email= $_POST['email1'];
+    $password= $_POST['password1'];
+    $sql = "INSERT INTO `admin_profile`(`a_name`, `a_lname`, `a_contact`, `a_email`, `a_password`, `a_acc_created`) VALUES (('$firstname', '$lastname', '$contact', '$email', '$password')";
+
+    if($conn->query($sql) == true){
+        echo "Successfully inserted";
+    
+    }
+    else{
+        echo "ERROR: $sql <br> $conn->error";
+      
+    }
+    $conn->close();
+}
+?>
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,45 +99,46 @@
         <div class="title">Manage Your Profile</div>
         <form action="#">
 
-            3<div class="user-details">
+            <div class="user-details">
                 <div class="input-box">
                     <span class="details">First Name</span>
-                    <input class="text" type="text" required>
+                    <input class="text" type="text" name="firstname1">
                 </div>
             
                 <div class="input-box">
                     <span class="details">Last Name</span>
-                    <input class="text" type="text" required>
+                    <input class="text" type="text" name="lastname1">
                 </div>
 
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input class="text" type="text" required>
+                    <input class="text" type="text" name="email1">
                 </div>
            
                 <div class="input-box">
                     <span class="details">Phone Number</span>
-                    <input class="text" type="text"  required>
+                    <input class="text" type="text"  name="contact1">
                 </div>
             
                 <div class="input-box">
                     <span class="details">Addres</span>
-                    <input class="text" type="text" required>
+                    <input class="text" type="text" name="address1">
                 </div>
 
                 <div class="input-box">
                     <span class="details">New Password</span>
-                    <input class="text" type="password" required>
+                    <input class="text" type="password"  name="password1">
                 </div>
            
                 <div class="input-box">
                     <span class="details">Confirm Password</span>
-                    <input class="text" type="password"  required>
+                    <input class="text" type="password"   name="confirm1">
                 </div>
             
                 <div class="button">
-                    <input type="submit" value="Update Profile">
+                    <input class="hero-btn red-btn" type="submit" name="gInsert" value="Update Profile">
                 </div>
+
         </form>
 </div>
 

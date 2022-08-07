@@ -71,6 +71,32 @@ if(isset($_POST["update"]))
 <html>
 
 
+<!-- <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Brand</span>
+                    <input class="text" placeholder="Enter your two wheeler brand" required>
+                </div>
+           
+                <div class="input-box">
+                    <span class="details">Model</span>
+                    <input class="text" placeholder="Enter your two wheeler model" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">Vechile Registration Number</span>
+                    <input class="text" placeholder="Enter your Vechile Registration Number" required>
+                </div>
+
+                <div class="input-box">
+                <span class="details">Year of Manufacture</span>
+                <input class="text" placeholder="Enter year of manufacture" required>
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Add Vehicle">
+                </div>
+                </div> -->
+
 
 
 

@@ -1,3 +1,33 @@
+<?php
+if(isset($_POST["gInsert"])){
+    
+    include 'conn.php';
+
+    //if (!$con){
+        //die("connection to this database failed due to". 
+        //mysqli_connect_error());
+    //}
+    // echo "Success connecting to the db";
+
+    $firstname = $_POST['firstname1'];
+    $lastname= $_POST['lastname1'];
+    $email= $_POST['email1'];
+    $contact= $_POST['contact1'];
+    $messages= $_POST['messages1'];
+    $sql = "INSERT INTO `guest_profile` (`g_first_name`, `g_last_name`, `g_email`, `g_contact`, `g_messages`) VALUES ('$firstname', '$lastname', '$email', '$contact', '$messages')";
+    // echo $firstname; 
+
+    if($conn->query($sql) == true){
+        echo "Successfully inserted";
+    
+    }
+    else{
+        echo "ERROR: $sql <br> $conn->error";
+      
+    }
+    $conn->close();
+}
+?>
 <html>
     <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
@@ -9,45 +39,46 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.cssq">
 </head>
 <body>
-    <div class="CONTACTUS"> 
+<div class="CONTACTUS"> 
         <div class="title">
             <h1>CONTACT US</h1>
         </div>
         <div class="box">
             <!--Form box-->
+
             <div class="contact form">
             <h3> Send a Message</h3>
-            <form>
+            <form method="post" action="">
                 <div class="formBox"> 
                     <div class="row50">
                         <div class="inputBox">
                             <span>First Name</span>  
-                            <input type="type" placeholder="Enter Your First Name">
+                            <input type="text" placeholder="Enter Your First Name" name="firstname1">
                         </div>
                         <div class="inputBox">
                             <span>Last Name</span>  
-                            <input type="type" placeholder="Enter Your Last Name">
+                            <input type="type" placeholder="Enter Your Last Name" name="lastname1">
                         </div>
                     </div>
                     <div class="row50">
                         <div class="inputBox">
                             <span>Email</span>  
-                            <input type="type" placeholder="Enter Your Email">
+                            <input type="type" placeholder="Enter Your Email" name="email1">
                         </div>
                         <div class="inputBox">
                             <span>Mobile Number</span>  
-                            <input type="type" placeholder="Enter Your Number">
+                            <input type="type" placeholder="Enter Your Number" name="contact1">
                         </div>
                     </div>
                     <div class="row100">
                         <div class="inputBox">
                             <span>Message</span>  
-                            <textarea placeholder="Enter Your Messages here."></textarea>
+                            <textarea placeholder="Enter Your Messages here." name="messages1"></textarea>
                         </div>
                     </div>
                     <div class="row100">
                         <div class="inputBox">
-                           <a href="submit" class="hero-btn red-btn"> Send</a>
+                           <input  class="hero-btn red-btn" type="submit" name="gInsert" value="Send">
                         </div>
                     </div>
                     <div class="row100">
@@ -104,38 +135,6 @@
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<?php
-if(isset($_POST['name'])){
-    $server = "localhost";
-    $username = "root";
-    $password  = "";
-
-    $conn = mysqli_connect($server, $username, $password);
-
-    if (!$con){
-        die("connection to this database failed due to". 
-        mysqli_connect_error());
-    }
-    // echo "Success connecting to the db";
-
-    $firstname $_Post['firstname'];
-    $lastname $_Post['lastname'];
-    $email $_Post['email'];
-    $contact $_Post['contact'];
-    $messages $_Post['nessages'];
-    $sql = "INSERT INTO `guest_profile` (`g_first_name`, `g_last_name`, `g_email`, `g_contact`, `g_messages`) VALUES ('$firstname', '$lastname', '$email', '$contact', '$messages');";
-
-    echo $sql;
-
-    if($con->query($sql) == true){
-        echo "Successfully inserted";
-    }
-    else{
-        echo "ERROR: $sql <br> $con->error";
-    }
-    $con->close();
-}
-?>
 
 
 </body>
