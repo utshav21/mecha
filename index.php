@@ -1,3 +1,10 @@
+<?php
+
+if(isset($_POST["update"]))
+    {
+    }
+
+?>
 <html>
 <?php include "header.php"?>
 <body>
@@ -17,16 +24,18 @@
 </section>
 
 <div class="form">
+    <form method="POST" action="">
     <h2>Login Here</h2>
     <input type="email" name="email" placeholder="Enter Your Email Here">
     <input type="password" name="" placeholder="Password">
     <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
+        <input type="checkbox" checked="checked" name="update"> Remember me
     </label>
-    <button class="btn"><a href="CustomerPanel/custindex.php">Login</a></button>
+    <button class="btn"><a href="CustomerPanel/sdfsdf.php">Login</a></button>
 
     <p class="link">Don't have an account?</p> 
     <a href="registration.php">Sign Up</a>
+</form>
 </div>
 
 <!----------About us content ---------->

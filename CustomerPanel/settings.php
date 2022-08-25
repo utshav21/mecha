@@ -21,10 +21,6 @@ if(isset($_POST["update"])){
 }
 ?>
 
-
-
-"INSERT INTO `user_profile`(`u_id`, `u_name`, `u_contact`, `u_email`, `u_password`, `u_acc_created`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]','[value-5]','[value-6]')";
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -99,7 +95,7 @@ if(isset($_POST["update"])){
 
 <div class="container">
         <div class="title">Manage Your Profile</div>
-        <form action="#">
+        <form method="POST" action="#">
 
             <div class="user-details">
                 <div class="input-box">

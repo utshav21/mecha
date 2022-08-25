@@ -25,22 +25,18 @@
             </div>
             <table class="appointments">
                 <thead>
-                    <td>Customer Name</td>
-                    <td>Service Date</td>
+                    <td>Registered Number</td>
                     <td>Preferred Time</td>
                     <td>Service Type</td>
-                    <td>Reffered To</td>
                     <td>Problem Description</td>
                     <td>Edit Details</td>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Ajay Chaudhary</td>
-                        <td>Anuj Rai</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
+                        <td>Pra03-02-16Pa-4566</td>
+                        <td>10:30AM</td>
+                        <td>General Servicing</td>
+                        <td>Only Servicing</td>
                         <td>
                             <i class="far fa-eye"></i>
                             <i class="far fa-edit"></i>
@@ -48,12 +44,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Ajay Chaudhary</td>
-                        <td>Anuj Rai</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
+                        <td>Pra03-02-07Pa-5936</td>
+                        <td>12:30PM</td>
+                        <td>Noise from Chain</td>
+                        <td>Ab heavy noise comming from Chain probably its need to be changed</td>
                         <td>
                             <i class="far fa-eye"></i>
                             <i class="far fa-edit"></i>
@@ -61,12 +55,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Ajay Chaudhary</td>
-                        <td>Anuj Rai</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
+                        <td>Ba-02-77-1234</td>
+                        <td>01:00PM</td>
+                        <td>Problem in pick up</td>
+                        <td>Time to servicerd and change spark plugs</td>
                         <td>
                             <i class="far fa-eye"></i>
                             <i class="far fa-edit"></i>
@@ -74,12 +66,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Ajay Chaudhary</td>
-                        <td>Anuj Rai</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
+                        <td>Ba-02-89-3514</td>
+                        <td>02:30PM</td>
+                        <td>Problem in Meter</td>
+                        <td>Odometer, Speedometer and tripmeter don't work properly</td>
                         <td>
                             <i class="far fa-eye"></i>
                             <i class="far fa-edit"></i>
@@ -87,12 +77,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Ajay Chaudhary</td>
-                        <td>Anuj Rai</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
+                        <td>Pra03-02-022-1111</td>
+                        <td>03:00PM</td>
+                        <td>General Servicing</td>
+                        <td>Maintainance</td>
                         <td>
                             <i class="far fa-eye"></i>
                             <i class="far fa-edit"></i>
@@ -100,12 +88,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Ajay Chaudhary</td>
-                        <td>Anuj Rai</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
-                        <td>Roshan Thapa</td>
-                        <td>Suraj Shrestha</td>
+                        <td>Ba-02-94-9807</td>
+                        <td>03:30PM</td>
+                        <td>Problem in pick up</td>
+                        <td>Time to servicerd and change spark plugs</td>
                         <td>
                             <i class="far fa-eye"></i>
                             <i class="far fa-edit"></i>

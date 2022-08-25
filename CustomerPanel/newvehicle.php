@@ -2,15 +2,15 @@
 
 if(isset($_POST["update"]))
     {
-        include 'conn.php';
-        
+    include 'conn.php';
+
     $v_brand = $_POST['v_brand1'];
     $v_model = $_POST['v_model1'];
     $v_reg_num = $_POST['v_reg_num1'];
     $v_year = $_POST['v_year1'];
     $sql = "INSERT INTO `user_vehicle_details` (`veh_brand`, `veh_model`, `veh_y_o_m`, `veh_reg_num`,`u_ids`) VALUES ('$v_brand', '$v_model', '$v_year','$v_reg_num','6')";
-    include 'conn.php';
-
+   
+        echo $sql;
     if($conn->query($sql) == true){
         echo "Successfully inserted";
     
@@ -100,7 +100,7 @@ if(isset($_POST["update"]))
 
 <div class="container">
         <div class="title">Add Your New Vehicle</div>
-        <form action="#">
+        <form method="POST" action="#">
 
             <div class="user-details">Type
                 <div class="form-check">

@@ -6,6 +6,7 @@
                 </div>
                 <i class=""></i>
                 <div class="user">
+                
                     <img src="images/logo.PNG" alt="">
                 </div>
             </div>

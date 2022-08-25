@@ -54,17 +54,17 @@
                     </div>
                     <table class="appointments">
                         <thead>
-                            <td>Name</td>
+                            <td>Registered Number</td>
                             <td>Technician</td>
                             <td>Problems</td>
                             <td>Actions</td>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
+                                <td>Pra03-02-16Pa-4566</td>
                                 <td>Suraj Shrestha</td>
+                                <td>General Servicing</td>
+                                <td>Serviced</td>
                                 <td>
                                     <i class="far fa-eye"></i>
                                     <i class="far fa-edit"></i>
@@ -72,10 +72,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>Anuj Rai</td>
+                                <td>Pra03-02-07Pa-5936</td>
                                 <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Clutchplates</td>
+                                <td>Changed Clutchplates</td>
                                 <td>
                                     <i class="far fa-eye"></i>
                                     <i class="far fa-edit"></i>
@@ -83,10 +83,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
+                                <td>Ba-02-77-1234</td>
                                 <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Problem in pick up</td>
+                                <td>Spark Plugs replaced and Carburetor Cleaned</td>
                                 <td>
                                     <i class="far fa-eye"></i>
                                     <i class="far fa-edit"></i>
@@ -94,10 +94,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
+                                <td>Pra03-02-022-1111</td>
                                 <td>Suraj Shrestha</td>
+                                <td>General Servicing</td>
+                                <td>Serviced</td>
                                 <td>
                                     <i class="far fa-eye"></i>
                                     <i class="far fa-edit"></i>
@@ -105,10 +105,10 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td>Ba-02-89-3514</td>
                                 <td>Ajay Chaudhary</td>
-                                <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Noise from Chain</td>
+                                <td>Chain adjusted and lubes</td>
                                 <td>
                                     <i class="far fa-eye"></i>
                                     <i class="far fa-edit"></i>
@@ -116,10 +116,10 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>Anuj Rai</td>
+                                <td>Ba-02-94-9807</td>
                                 <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Problem in Meter</td>
+                                <td>Replaced the instrument console</td>
                                 <td>
                                     <i class="far fa-eye"></i>
                                     <i class="far fa-edit"></i>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="technician">
                     <div class="heading">
-                        <h2>Technician Specialities</h2>
+                        <h2>Technician Specialitie</h2>
                         <a href="#" class="btn">View All</a>
                     </div>
                     <table class="visiting">

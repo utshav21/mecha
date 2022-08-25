@@ -97,7 +97,7 @@ if(isset($_POST["gInsert"])){
 
 <div class="container">
         <div class="title">Manage Your Profile</div>
-        <form action="#">
+        <form method="POST" action="#">
 
             <div class="user-details">
                 <div class="input-box">

@@ -1,5 +1,5 @@
 <?php
-$register = false;
+$register = true;
 $showError = false;
 if(isset($_POST["submit"]))
    {
@@ -10,20 +10,29 @@ if(isset($_POST["submit"]))
     $user_password = $_POST['u_passwd1'];
     $user_cpassword = $_POST['u_cpasswd1'];
 
+    $hashed_password = hash('sha512',$user_password);
     if($user_password == $user_cpassword){
         include 'conn.php';
         
-        $query1 = "INSERT INTO `user_profile` (`u_name`, `u_email`, `u_password`, `u_contact`, `u_acc_created`) VALUES ('$user_username', '$user_email', '$user_password', '$user_contact',current_timestamp())";
+        $query1 = "INSERT INTO `user_profile` (`u_name`, `u_email`, `u_password`, `u_contact`, `u_acc_created`) VALUES ('$user_username', '$user_email', '$hashed_password', '$user_contact',current_timestamp())";
         if(mysqli_query($conn,$query1)){
-            $register = true;
-            echo "<script>window.open('login.php','_self')</script>";
+            // $register = true;
+            // echo "<script>window.open('registration.php','_self')</script>";
+            echo $query1;
+            echo $user_contact;
+        echo $user_cpassword;
+        echo $hashed_password;
         }
         else{
             $showError = "UserName or Contact already in use";
+            echo $query1;
         }
     }
     else{
         $showError = "Password Doesnot match";
+        echo $user_contact;
+        echo $user_cpassword;
+        echo $hashed_password;
 
     }
 }
@@ -62,7 +71,7 @@ if(isset($_POST["submit"]))
     </div> ';
     }
     ?>
-          <form action="#" method="post">  
+          <form action="" method="post">  
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Full Name</span>

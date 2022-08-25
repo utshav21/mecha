@@ -1,5 +1,6 @@
 <html>
 <?php include "header.php"?>
+
     
 <section class="header">
 <?php include "sidebar.php"?>
@@ -11,8 +12,16 @@
                     <input type="text" name="search" placeholder="search here">
                     <label for="search"><i class="fas fa-search"></i></label>
                 </div>
+                
+
+
+                
                 <i class=""></i>
+                
                 <div class="user">
+                <button type="button" class="popup" onclick="myFunction()">Notification
+  <span class="popuptext" id="myPopup"><h4>1.Servicing Completed.</h4><p>Please visit workshop</p></span>
+</button>
                     <img src="images/logo.PNG" alt="">
                 </div>
             </div>
@@ -62,20 +71,20 @@
                             <tr>
                                 <td>Pra03-02-022-1111</td>
                                 <td>Anuj Rai</td>
+                                <td>Noise from Chain</td>
+                                <td>Chain adjusted and lubes</td>
+                            </tr>
+                            <tr>
+                                <td>Ba-02-77-1234</td>
                                 <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Noise from head</td>
+                                <td>Cone adjusted</td>
                             </tr>
                             <tr>
                                 <td>Pra03-02-022-1111</td>
-                                <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
                                 <td>Suraj Shrestha</td>
-                            </tr>
-                            <tr>
-                                <td>Pra03-02-022-1111</td>
-                                <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>General Servicing</td>
+                                <td>Serviced</td>
                             </tr>
                         </tbody>
                     </table>
@@ -153,4 +162,7 @@
             </table>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 </html>
+

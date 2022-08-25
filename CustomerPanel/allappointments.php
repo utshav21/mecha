@@ -23,68 +23,75 @@
                     </div>
         <table class="heading">
         <thead>
-                            <td>Name</td>
+                            <td>Registered Number</td>
                             <td>Serviced Date</td>
                             <td>Technician</td>
                             <td>Problems</td>
                             <td>Actions</td>
         </thead>
                         <tbody>
-                            <tr>
-                                <td>Ajay Chaudhary</td>
-                                 <td>10-04-2019</td>
+                        <tr>
+                                <td>Pra03-02-022-1111</td>
+                                <td>07-08-2019</td>
                                 <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Noise from Chain</td>
+                                <td>Chain adjusted and lubes</td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>10-04-2019</td>
-                                <td>Anuj Rai</td>
+                                <td>Pra03-02-022-1111</td>
+                                <td>19-10-2019</td>
                                 <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Noise from head</td>
+                                <td>Cone adjusted</td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>10-04-2019</td>
-                                <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
+                                <td>Ba-02-77-1234</td>
+                                <td>27-02-2020</td>
                                 <td>Suraj Shrestha</td>
+                                <td>General Servicing</td>
+                                <td>Serviced</td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>10-04-2019</td>
+                                <td>Pra03-02-022-1111</td>
+                                <td>13-03-2020</td>
                                 <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Problem in pick up</td>
+                                <td>Spark Plugs replaced and Carburetor Cleaned</td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>10-04-2019</td>
-                                <td>Anuj Rai</td>
+                                <td>Ba-02-77-1234</td>
+                                <td>10-05-2020</td>
                                 <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Clutchplates</td>
+                                <td>Changed Clutchplates</td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>10-04-2019</td>
-                                <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
+                                <td>Pra03-02-022-1111</td>
+                                <td>16-09-2020</td>
                                 <td>Suraj Shrestha</td>
+                                <td>General Maintainance</td>
+                                <td>Serviced and maintained</td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>10-04-2019</td>
+                                <td>Ba-02-77-1234</td>
+                                <td>09-03-2021</td>
                                 <td>Anuj Rai</td>
-                                <td>Roshan Thapa</td>
-                                <td>Suraj Shrestha</td>
+                                <td>Noise from Chain</td>
+                                <td>Chain adjusted and lubes</td>
                             </tr>
                             <tr>
-                                <td>Ajay Chaudhary</td>
-                                <td>10-04-2019</td>
-                                <td>Anuj Rai</td>
+                                <td>Pra03-02-022-1111</td>
+                                <td>26-08-2021</td>
                                 <td>Roshan Thapa</td>
+                                <td>Problem in Meter</td>
+                                <td>Replaced the instrument console</td>
+                            </tr>
+                            <tr>
+                                <td>Ba-02-77-1234</td>
+                                <td>03-01-2022</td>
                                 <td>Suraj Shrestha</td>
+                                <td>General Servicing</td>
+                                <td>Serviced</td>
                             </tr>
                         </tbody>
                     </table>

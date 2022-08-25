@@ -1,3 +1,26 @@
+<?php
+if(isset($_POST["gInsert"])){
+    
+    include 'conn.php';
+    $applicationdate = $_POST['date1'];
+    $applicationtime= $_POST['time1'];
+    $recordedproblem= $_POST['problem1'];
+    $status= $_POST['status1'];
+    $remarks= $_POST['remarks1'];
+    $sql = "INSERT INTO `record`(`app_date`, `app_time`, `rec_prob`, `rec_time`, `status`, `rermarks`) VALUES ('[applicationdate]','[applicationtime]','[recordedproblem]','[remarks]')";
+
+    if($conn->query($sql) == true){
+        echo "Successfully inserted";
+    
+    }
+    else{
+        echo "ERROR: $sql <br> $conn->error";
+      
+    }
+    $conn->close();
+}
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -73,7 +96,7 @@
 
 <div class="container">
         <div class="title">Book Your Service Now</div>
-        <form action="#">
+        <form method="POST" action="#">
 
             <div class="user-details">Type
                 <div class="form-check">
